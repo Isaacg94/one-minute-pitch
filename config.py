@@ -3,7 +3,7 @@ class Config:
     '''
     General configuration parent class
     '''
-    SECRET_KEY = os.environ.get('zUSh0tePFrKuM5kor6ewSS4D8ebfIueB')
+    SECRET_KEY = os.environ.get('SECRET_KEY')
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://isaac:5272@localhost/pitchlist'
 
 
