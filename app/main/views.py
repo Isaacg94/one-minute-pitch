@@ -2,6 +2,8 @@ from flask import render_template,request,redirect,url_for
 from . import main
 from ..models import Comment
 from .forms import CommentForm
+from flask_login import login_required
+
 
 # Views
 @main.route('/')
@@ -33,6 +35,7 @@ def profile(name):
 
 
 @main.route('/comment/<int:pitch_id>', methods = ['POST','GET'])
+@login_required
 def comment(pitch_id):
     form = CommentForm()
     pitch = Pitch.query.get(pitch_id)
