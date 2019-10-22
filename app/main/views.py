@@ -16,7 +16,7 @@ def index():
     sales = Pitch.query.filter_by(category = 'Sales').all()
     product = Pitch.query.filter_by(category = 'Product').all()
 
-    return render_template('main.index.html',title = title,lyric = lyric, sales = sales, product = product)
+    return render_template('main.index.html',title = title,pitches = pitches,lyric = lyric, sales = sales, product = product)
 
 
 @main.route('/user/<name>')
