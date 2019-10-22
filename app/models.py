@@ -28,16 +28,16 @@ class User(db.Model):
     password_secure = db.Column(db.String(255))
 
     @property
-        def password(self):
-            raise AttributeError('You cannot read the password attribute')
+    def password(self):
+        raise AttributeError('You cannot read the password attribute')
 
-        @password.setter
-        def password(self, password):
-            self.password_secure = generate_password_hash(password)
+    @password.setter
+    def password(self, password):
+        self.password_secure = generate_password_hash(password)
 
 
-        def verify_password(self,password):
-            return check_password_hash(self.password_secure,password)
+    def verify_password(self,password):
+        return check_password_hash(self.password_secure,password)
 
 
 class Comment:
