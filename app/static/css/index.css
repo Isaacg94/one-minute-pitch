@@ -1,5 +1,5 @@
 body {
-    background-color: #F5E5E5;
+    background-color: rgb(255, 245, 245);
 }
 .jumbotron {
     background: transparent;
@@ -21,31 +21,41 @@ body {
     justify-content: center;
     flex-direction: row;
 }
+.tab-content {
+    margin-top: 4%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
 .category {
-    color: azure;
+    color: rgb(255, 255, 255);
     font-weight: bolder;
 }
 .category:hover {
     text-decoration: none;
-    color: rgb(80, 137, 163);
+    color: rgb(226, 198, 233);
 }
 #crdz {
-    background-color:rgb(55, 27, 70);
+    background-color:rgb(55, 57, 70);
     border-radius: 20px;
     margin: 1.5%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     color: azure;
     text-decoration: none;
-    padding: 3%;
+    padding: 2.5%;
     font-family: 'Alegreya Sans SC', sans-serif;
+
+    position: relative;
+    -webkit-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
 
 
 }
 #crdz:hover {
     cursor: pointer;
-    -webkit-transform: scale(1.01);
-    -ms-transform: scale(1.01);
-    transform: scale(1.01);
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
 
 }
 
