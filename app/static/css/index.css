@@ -1,0 +1,71 @@
+body {
+    background-color: #F5E5E5;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+.category {
+    color: azure;
+    font-weight: bolder;
+}
+.category:hover {
+    text-decoration: none;
+    color: rgb(80, 137, 163);
+}
+#crdz {
+    background-color:rgb(55, 27, 70);
+    border-radius: 20px;
+    margin: 1.5%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    color: azure;
+    text-decoration: none;
+    padding: 3%;
+    font-family: 'Alegreya Sans SC', sans-serif;
+
+
+}
+#crdz:hover {
+    cursor: pointer;
+    -webkit-transform: scale(1.01);
+    -ms-transform: scale(1.01);
+    transform: scale(1.01);
+
+}
+
+
+#crd {
+    border-radius: 20px;
+    margin: 1.5%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    position: relative;
+    -webkit-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+}
+#crd:hover {
+    cursor: pointer;
+    -webkit-transform: scale(1.01);
+    -ms-transform: scale(1.01);
+    transform: scale(1.01);
+}
+
+#img {
+    border: 6 px solid rgb(219, 223, 224);
+    border-radius: 50%;
+    margin: 10%;
+} 
+.card-title {
+    font-weight: bolder;
+}
+.card-text {
+    font-size: 15px;
+}
+
+.btn {
+    margin-top: 12%;
+    border-radius: 50px;
+    font-weight: bolder;
+}
