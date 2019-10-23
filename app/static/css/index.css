@@ -3,9 +3,7 @@ body {
 }
 .jumbotron {
     background: transparent;
-    font-family: 'Jomolhari', serif;
-    
-
+    font-family: 'Jomolhari', serif;    
 }
 .jumbotron h1 {
     font-size: 50px;
@@ -13,8 +11,30 @@ body {
 }
 .navbar {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 
+.nav-text {
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-weight: bolder;
+    color: rgb(206, 132, 206);
+}
 
+.nav-text:hover {
+    text-decoration: none;
+    color: rgb(231, 207, 229);
+}
+.nav-text-add {
+    border: 1.5px solid #009c76;
+    border-radius: 20px;
+    padding: 5px;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-weight: bolder;
+    color: #009c76;
+}
+.nav-text-add:hover {
+    text-decoration: none;
+    color: #000;
+    background: #009c76;
 }
 .content {
     display: flex;
