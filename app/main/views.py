@@ -22,7 +22,7 @@ def index():
 
 
 @main.route('/create_new', methods = ['POST','GET'])
-# @login_required
+@login_required
 def new_pitch(id):
     form = PitchForm()
 
