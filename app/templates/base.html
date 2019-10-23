@@ -11,38 +11,46 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
-    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Jomolhari&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <!-- Content block -->
+    
 
-    {% block content %}
+
 
     <nav class="navbar sticky-top bg-dark">
         <div class="container navbr">
-            <a class="navbar-text" href="/">World News Highlights </a>
-            <ul class="nav navbar-nav navbar-right">
-                {% if current_user.is_authenticated %}
-                <li style="color:white;padding:15px;">{{current_user.username}}</li>
-                <li><a href="{{url_for('auth.logout')}}">Sign out</a></li>
-                {% else %}
-                <li><a href="{{url_for('auth.login')}}">Sign in</a></li>
-                {%endif%}
-              </ul>
-
-              <ul class="nav navbar-nav navbar-right">
-                {% if current_user.is_authenticated %}
-                <li><a href="{{url_for('main.profile',uname=current_user.username)}}">Profile</a></li>
-                <li><a href="{{url_for('auth.logout')}}">Sign out</a></li>
-                {% else %}
-                <li><a href="{{url_for('auth.login')}}">Sign in</a></li>
-                {%endif%}
-              </ul>
+                <ul class="nav navbar-nav navbar-right">
+                        {% if current_user.is_authenticated %}
+                        <li style="color:white;padding:15px;">{{current_user.username}}</li>
+                        <li><a href="{{url_for('auth.logout')}}">Sign out</a></li>
+                        {% else %}
+                        <li><a href="{{url_for('auth.login')}}">Sign in</a></li>
+                        {%endif%}
+                    </ul>
+            
+                    <ul class="nav navbar-nav navbar-right">
+                        {% if current_user.is_authenticated %}
+                        <li><a href="{{url_for('main.profile',uname=current_user.username)}}">Profile</a></li>
+                        <li><a href="{{url_for('auth.logout')}}">Sign out</a></li>
+                        {% else %}
+                        <li><a href="{{url_for('auth.login')}}">Sign in</a></li>
+                        {%endif%}
+                    </ul>
+            
+            
         </div>
     </nav>
 
+    <div class="jumbotron text-center">
+            <h1>pitch | <strong>Space...</strong> </h1>
+            
+    
+        </div>
 
+    {% block content %}
 
 
 

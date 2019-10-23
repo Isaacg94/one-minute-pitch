@@ -1,7 +1,21 @@
 body {
     background-color: #F5E5E5;
 }
+.jumbotron {
+    background: transparent;
+    font-family: 'Jomolhari', serif;
+    
 
+}
+.jumbotron h1 {
+    font-size: 50px;
+
+}
+.navbar {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+
+}
 .content {
     display: flex;
     justify-content: center;
