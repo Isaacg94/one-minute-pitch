@@ -15,24 +15,28 @@ def index():
     '''
     title = 'Home - Pitch | Space'
     categories = Category.get_categories()
+    pitches = Pitch.query.all()
+    product = Pitch.query.filter_by
 
     return render_template('index.html',title = title,categories= categories)
 
 
 @main.route('/create_new', methods = ['POST','GET'])
-@login_required
-def new_pitch():
-    pitch_form = PitchForm()
+# @login_required
+def new_pitch(id):
+    form = PitchForm()
+
     if form.validate_on_submit():
         title = form.title.data
         post = form.post.data
         category = form.category.data
         user_id = current_user
-        new_pitch_object = Pitch(post=post,user_id=current_user._get_current_object().id,category=category,title=title)
-        new_pitch_object.save_p()
-        return redirect(url_for('main.index'))
-        
-    return render_template('new_pitch.html', form = form)
+
+        new_pitch = Pitch(title=title, post=post,category=category, user_id=current_user)
+        new_pitch.save_pitch()
+        return redirect(url_for('.index'))
+
+    return render_template('new_pitch.html', pitch_form = form)
 
 
 @main.route('/user/<uname>')

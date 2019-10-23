@@ -2,18 +2,27 @@
 {% import "bootstrap/wtf.html" as wtf %}
 
 {% block content %}
-    <div class="container">
+<div class="container">
 
-        <div class="col-md-8">
+    <div class="col-md-8">
 
-            {{pitch}}
+        {{pitch}}
+        <div class="card text-center tab-pane active" style="width: 18rem;" id="crd">
+            <div class="card-body">
+                <img id="img" src="images/Screenshot from 2019-09-01 12-48-23.png" alt="" width="50%">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-outline-info btn-block">Comment</a>
+            </div>
         </div>
-
-        <div class="col-md-4">
-
-            {{ wtf.quick_form(pitch_form) }}
-        </div>
-
+        
     </div>
+
+    <div class="col-md-4">
+
+        {{ wtf.quick_form(pitch_form) }}
+    </div>
+
+</div>
 
 {% endblock %}

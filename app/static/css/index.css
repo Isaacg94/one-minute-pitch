@@ -22,7 +22,6 @@ body {
     flex-direction: row;
 }
 .tab-content {
-    margin-top: 4%;
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -33,7 +32,7 @@ body {
 }
 .category:hover {
     text-decoration: none;
-    color: rgb(226, 198, 233);
+    color: rgb(231, 207, 229);
 }
 #crdz {
     background-color:rgb(55, 57, 70);
@@ -42,7 +41,7 @@ body {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     color: azure;
     text-decoration: none;
-    padding: 2.5%;
+    padding: 2%;
     font-family: 'Alegreya Sans SC', sans-serif;
 
     position: relative;
