@@ -1,4 +1,4 @@
-from ..email import mail_message
+# from ..email import mail_message
 from flask import render_template,redirect,url_for, flash,request
 from . import auth
 from flask_login import login_user,logout_user,login_required
@@ -8,7 +8,7 @@ from .forms import LoginForm,RegistrationForm
 from .. import db
 
 
-@auth.route('/login')
+@auth.route('/login', methods = ["POST", "GET"])
 def login():
     login_form = LoginForm()
     if login_form.validate_on_submit():
@@ -40,7 +40,7 @@ def register():
         db.session.add(user)
         db.session.commit()
 
-        mail_message("Welcome to watchlist","email/welcome_user",user.email,user=user)
+        # mail_message("Welcome to watchlist","email/welcome_user",user.email,user=user)
         
         return redirect(url_for('auth.login'))
         title = "New Account"

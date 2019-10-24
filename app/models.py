@@ -17,8 +17,8 @@ class Pitch(db.Model):
     post = db.Column(db.String(255))
     time = db.Column(db.DateTime, default = datetime.utcnow)
     user_id = db.Column(db.Integer,db.ForeignKey('users.id'))
-    category_id = db.Column(db.Integer,db.ForeignKey('categories.id'))
     comments = db.relationship('Comment',backref = 'pitch',lazy = "dynamic")
+    category = db.Column(db.String(255))
 
     '''
     Pitch class to define pitch columns
@@ -29,6 +29,7 @@ class Pitch(db.Model):
     #     self.title = title
     #     self.post = post
     def save_pitch(self):
+        
         db.session.add(self)
         db.session.commit()
 
@@ -66,17 +67,17 @@ class User(UserMixin,db.Model):
         return check_password_hash(self.password_secure,password)
 
 
-class Category(db.Model):
-    __tablename__ = 'categories'
+# class Category(db.Model):
+#     __tablename__ = 'categories'
 
-    id = db.Column(db.Integer,primary_key = True)
-    name = db.Column(db.String(255), index = True)
-    pitches = db.relationship('Pitch',backref = 'category',lazy = "dynamic")
+#     id = db.Column(db.Integer,primary_key = True)
+#     name = db.Column(db.String(255), index = True)
+#     pitches = db.relationship('Pitch',backref = 'category',lazy = "dynamic")
 
-    @classmethod
-    def get_categories(cls):
-        categories = Category.query.all()
-        return categories
+#     @classmethod
+#     def get_categories(cls):
+#         categories = Category.query.all()
+#         return categories
 
 
 

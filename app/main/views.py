@@ -1,6 +1,6 @@
 from flask import render_template,request,redirect,url_for,abort
 from . import main
-from ..models import Comment, User, Pitch, Category
+from ..models import Comment, User, Pitch
 from .forms import CommentForm,UpdateProfile, PitchForm
 from flask_login import login_required, current_user
 from .. import db,photos
@@ -14,27 +14,26 @@ def index():
     View root page function that returns the index page and its data
     '''
     title = 'Home - Pitch | Space'
-    categories = Category.get_categories()
     pitches = Pitch.query.all()
-    product = Pitch.query.filter_by
 
-    return render_template('index.html',title = title,categories= categories)
+    return render_template('index.html',title = title, pitches = pitches)
 
 
 @main.route('/create_new', methods = ['POST','GET'])
 @login_required
-def new_pitch(id):
+def new_pitch():
     form = PitchForm()
-
+   
     if form.validate_on_submit():
         title = form.title.data
         post = form.post.data
         category = form.category.data
-        user_id = current_user
 
-        new_pitch = Pitch(title=title, post=post,category=category, user_id=current_user)
+        
+
+        new_pitch = Pitch(title=title, post=post, category=category, user_id=current_user.id)
         new_pitch.save_pitch()
-        return redirect(url_for('.index'))
+        return redirect(url_for('main.index'))
 
     return render_template('new_pitch.html', pitch_form = form)
 

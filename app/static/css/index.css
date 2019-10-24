@@ -33,18 +33,17 @@ body {
     color: rgb(190, 181, 190);
 }
 .nav-text-add {
-    border-bottom: 1.5px solid #009c61;
-    /* border-radius: 20px; */
-    padding: 5px;
+    border: 1.5px solid #009c61;
+    border-radius: 20px;
+    padding: 6px;
     font-family: 'Alegreya Sans SC', sans-serif;
     font-weight: bolder;
     color: #009c61;
 }
 .nav-text-add:hover {
     text-decoration: none;
-    color: rgb(83, 214, 137);
-    border-bottom: 1.5px solid #24c789;
-    /* background: #009c61; */
+    color: #fff;
+    background: #009c61;
 }
 .content {
     display: flex;
