@@ -121,3 +121,8 @@ body {
     border-radius: 50px;
     font-weight: bolder;
 }
+
+.footer {
+    margin-top: 9%;
+    background-color: rgb(55, 57, 70);
+}
