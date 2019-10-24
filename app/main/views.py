@@ -15,8 +15,13 @@ def index():
     '''
     title = 'Home - Pitch | Space'
     pitches = Pitch.query.all()
+    products = Pitch.query.filter_by(category = 'product').all()
+    lyrics = Pitch.query.filter_by(category = 'lyric').all()
+    sales = Pitch.query.filter_by(category = 'sales').all()
+    lines = Pitch.query.filter_by(category = 'pick-up lines').all()
+    personal = Pitch.query.filter_by(category = 'personal').all()
 
-    return render_template('index.html',title = title, pitches = pitches)
+    return render_template('index.html',title = title, pitches = pitches, products= products, lyrics=lyrics, sales=sales, lines=lines,personal=personal  )
 
 
 @main.route('/create_new', methods = ['POST','GET'])
