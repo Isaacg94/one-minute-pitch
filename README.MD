@@ -9,7 +9,7 @@
 
 A web application made using Python's Flask that allows a user to submit their minute pitches, on various categrories after creating an account on the webpage.
 
-**[Live-Link to site.](https://world-news-highlights.herokuapp.com/)**
+**[Live-Link to site.](https://warm-fortress-70157.herokuapp.com/)**
 ## Features
 * A landing page with a list of all the posted pitches.
 * A display of the various pitch categories.
